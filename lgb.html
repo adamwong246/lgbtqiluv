@@ -1,0 +1,31 @@
+<head>
+  <title>LGBTQILUV</title>
+</head>
+
+<body>
+  <h1>LGBTQILUV</h1>
+
+  {{> loginButtons}}
+
+  {{#if currentUser}}
+    <hr>
+
+  {{else}} 
+
+  {{/if}}
+
+  <hr>
+  {{> list_users}}
+</body>
+
+<template name="list_users">
+  <h2> Users </h2>
+  <ul>
+    {{#each users}}
+      <li>
+        {{email}}
+        {{profile}}
+      </li>
+    {{/each}}
+  </ul>
+</template>
